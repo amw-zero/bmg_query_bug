@@ -1,0 +1,11 @@
+To setup the example db, set the following environment variables before running:
+
+- PGHOST
+- PGPORT
+- PGUSER
+
+Or modify the `DB_URL` in https://github.com/amw-zero/bmg_query_bug/blob/master/postgres_constants.rb#L13 to point to your postgres database. 
+
+Then, run `./setup.sh` which will create the `tags_query_bug` database along with `transactions` and `tags` tables, and then finally seed the tables with the example data in https://github.com/amw-zero/bmg_query_bug/blob/master/data.rb.
+
+To run the queries that expose the bug, run `./expose_bug.rb`.
